@@ -8,7 +8,7 @@
     {
       "name": "ruidong-ui",
       "description": "睿动 AI 智能体统一 UI/UX 风格库。当前收录 smartsolu-linear。",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "source": "./",
       "author": {
         "name": "Ruidong AI"

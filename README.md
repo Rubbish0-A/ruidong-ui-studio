@@ -12,7 +12,7 @@ A [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) plugin. In
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin-d97757.svg)](https://docs.claude.com/en/docs/claude-code/plugins)
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](./CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.0.1-green.svg)](./CHANGELOG.md)
 [![Styles](https://img.shields.io/badge/styles-1%20curated-5e6ad2.svg)](#-available-styles)
 
 </div>

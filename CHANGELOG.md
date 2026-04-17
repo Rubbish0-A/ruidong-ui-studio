@@ -2,6 +2,26 @@
 
 本文档记录 `ruidong-ui-studio` 的每次发布改动。遵循 [Semantic Versioning](https://semver.org/)。
 
+## [1.0.1] — 2026-04-17
+
+### 🧹 重构（无功能变化）
+
+经 skill-creator 官方审计 + Codex 独立复审后的文档职责精简。零行为改动，仅提升可维护性。
+
+- **PHILOSOPHY.md** 瘦身：顶部加入硬性底线摘要（3 条红线 + 锚点短链到 PRINCIPLES），删除与 PRINCIPLES 重复的信息密度分级、绝不做清单、层级定义
+- **tailwind.config.js** 删除 legacy `primary` palette（50-900 蓝色阶梯）—— grep 验证零引用，对新项目是纯负担
+- **TOKENS.md** 删除对应「遗留兼容」说明段
+- **CONTRIBUTING.md** 的 Inter 禁用条目改为带锚点的 PRINCIPLES §4 短链引用
+
+### 价值
+
+- 同一规则的"真相源"数量从多份收敛到 PRINCIPLES 单源
+- 下次改跨风格规则（如字体、层级、动效）只需改 PRINCIPLES 一处，其他文件短链自动跟随
+- 默认加载路径（SKILL.md + QUICKREF.md）token 开销**不变**
+- 净减 17 行内容
+
+---
+
 ## [1.0.0] — 2026-04-17
 
 ### 🎉 首发
