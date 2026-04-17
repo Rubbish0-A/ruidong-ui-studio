@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/cover.png" alt="ruidong-ui-studio — One visual language. Every Ruidong AI agent." width="100%" />
+
 # ruidong-ui-studio
 
 [简体中文](./README.zh-CN.md) · **English**

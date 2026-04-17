@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/cover.png" alt="ruidong-ui-studio — 一套视觉语言，贯通每一个睿动智能体" width="100%" />
+
 # ruidong-ui-studio
 
 **简体中文** · [English](./README.md)
