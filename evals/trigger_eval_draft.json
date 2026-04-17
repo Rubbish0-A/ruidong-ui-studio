@@ -1,0 +1,82 @@
+[
+  {
+    "query": "帮我用 ruidong-ui 的风格做一个侧边栏，要带收起/展开切换，顶部放公司 logo",
+    "should_trigger": true
+  },
+  {
+    "query": "我要做一个新的睿动智能体，布局参考 SmartSolu 那一套，侧栏深色主区浅色",
+    "should_trigger": true
+  },
+  {
+    "query": "我在睿动智能体广场做的这个 app，视觉跟别的 app 不太一致，能帮我调得风格统一点吗",
+    "should_trigger": true
+  },
+  {
+    "query": "帮我把这个新 app 的主色换成跟智能解决方案架构师一样的那个紫色",
+    "should_trigger": true
+  },
+  {
+    "query": "刚开了一个 React+Vite 项目做睿动新智能体，配一下 Tailwind 让它跟其他智能体保持视觉一致",
+    "should_trigger": true
+  },
+  {
+    "query": "我要给一个睿动内部的新智能体做 Settings 页面，风格得跟公司其他智能体保持一致，用 React + Tailwind",
+    "should_trigger": true
+  },
+  {
+    "query": "给我一个睿动风格的卡片组件，浅灰底配极淡描边那种感觉",
+    "should_trigger": true
+  },
+  {
+    "query": "这个睿动 app 的字体能不能换成跟 SmartSoluExpert 一样的那个，现在用的默认字体太丑了",
+    "should_trigger": true
+  },
+  {
+    "query": "哥，咱们公司那套 UI 模板能不能直接套到我这个新的睿动 agent 上，我新建了 index.html 和 App.tsx",
+    "should_trigger": true
+  },
+  {
+    "query": "/ruidong-ui smartsolu-linear",
+    "should_trigger": true
+  },
+  {
+    "query": "帮我抄一下 Linear 官网的首页 hero 区样式，我要做个营销页",
+    "should_trigger": false
+  },
+  {
+    "query": "React 19 的 Suspense 怎么包装异步组件，给我个 useFetch hook 的例子",
+    "should_trigger": false
+  },
+  {
+    "query": "我想做一个 ChatGPT 风格的聊天界面，消息气泡左右分布，右上角有个新建对话按钮",
+    "should_trigger": false
+  },
+  {
+    "query": "Tailwind 里怎么写条件 className，我有一个 className={`p-4 ${isActive && 'bg-blue-500'}`} 感觉很丑",
+    "should_trigger": false
+  },
+  {
+    "query": "我有一个 Figma 设计稿（链接在这 https://figma.com/xxx），想转成 React + shadcn 代码",
+    "should_trigger": false
+  },
+  {
+    "query": "帮我设计一下软通动力的新 Logo，要现代一点，蓝色调",
+    "should_trigger": false
+  },
+  {
+    "query": "我这份睿动的产品介绍 PPT 要翻译成英文，保留原版式",
+    "should_trigger": false
+  },
+  {
+    "query": "帮我调一下睿动 API 的错误处理，现在 401 返回之后前端没有跳回登录页",
+    "should_trigger": false
+  },
+  {
+    "query": "这个 React 组件重新渲染太频繁了，怎么用 useMemo 或者 useCallback 优化",
+    "should_trigger": false
+  },
+  {
+    "query": "能帮我把这个后台管理 app 换成 Material Design 3 风格吗，现在用的是 Ant Design 感觉不新潮了",
+    "should_trigger": false
+  }
+]

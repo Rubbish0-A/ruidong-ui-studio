@@ -1,0 +1,19 @@
+{
+  "name": "ruidong-ui",
+  "version": "1.0.0",
+  "description": "睿动 AI 智能体统一 UI/UX 风格库。让同事在新建智能体项目时直接复用 Notion 骨架 + Linear 质感 + Raycast 浮层的成熟风格，不用每次从零讨论配色/字体/组件。当前收录 smartsolu-linear（来自 SmartSoluExpert v1.6.0）。",
+  "author": {
+    "name": "Ruidong AI"
+  },
+  "homepage": "https://github.com/ruidong-ai/ruidong-ui-studio",
+  "repository": "https://github.com/ruidong-ai/ruidong-ui-studio",
+  "license": "MIT",
+  "keywords": [
+    "ruidong",
+    "睿动",
+    "ui",
+    "design-system",
+    "tailwind",
+    "react"
+  ]
+}
