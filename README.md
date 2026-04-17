@@ -2,213 +2,213 @@
 
 # ruidong-ui-studio
 
-**简体中文** · [English](./README.en.md)
+[简体中文](./README.zh-CN.md) · **English**
 
-### 一套可复用的 UI/UX 风格库，让睿动 AI 的每一个智能体看起来像同一个团队做出来的。
+### A reusable UI/UX style library that makes every Ruidong AI agent look like it was designed by the same team.
 
-一个 [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) plugin。装上之后，让 Claude 按睿动沉淀下来的**成熟视觉风格**生成前端界面代码 —— 不再每次新项目都从零辩论配色、字体、组件。
+A [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) plugin. Install it once, and Claude will generate frontend code following a **battle-tested visual language** for every new agent project — no more starting from zero on colors, fonts, and components.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin-d97757.svg)](https://docs.claude.com/en/docs/claude-code/plugins)
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](./CHANGELOG.md)
-[![Styles](https://img.shields.io/badge/styles-1%20curated-5e6ad2.svg)](#-当前收录的风格)
+[![Styles](https://img.shields.io/badge/styles-1%20curated-5e6ad2.svg)](#-available-styles)
 
 </div>
 
 ---
 
-## 它解决什么问题
+## The Problem
 
-每次开一个新的睿动智能体项目，同一套问题就要从零讨论一遍：
+Every new AI agent project inside our team starts with the same conversation:
 
-- 用什么字体？用什么主色？侧边栏做深色还是浅色？
-- 卡片要不要加阴影？圆角多大？hover 态怎么反应？
-- 怎么让 Claude 生成的代码风格和我们其他产品对齐？
+- What font? What primary color? Should the sidebar be dark or light?
+- Card shadows? Corner radius? Hover behavior?
+- How do we get Claude to generate code that actually matches our other products?
 
-**本质上这些问题早就有答案了** —— 只是每次都散在各个项目的 `tailwind.config.js` 和组件文件里，没有归档，没有复用路径。
+**These questions already have answers** — they're just scattered across dozens of `tailwind.config.js` files in different repos, never archived, never reusable.
 
-`ruidong-ui-studio` 把这些答案沉淀为 Claude Code plugin：**装一次，所有后续的睿动智能体项目都能直接调用同一套风格**。
+`ruidong-ui-studio` captures those answers as a Claude Code plugin. **Install once; every future Ruidong agent project inherits the same visual language.**
 
 ---
 
-## 🎨 设计气质速览
+## 🎨 Design Feel at a Glance
 
-> **冷静、聪明、轻盈的专业工作台。**
+> **A calm, intelligent, lightweight professional workbench.**
 
-当前唯一收录的风格 [`smartsolu-linear`](skills/ruidong-ui/styles/smartsolu-linear/) 融合了三个业界标杆：
+The currently curated style, [`smartsolu-linear`](skills/ruidong-ui/styles/smartsolu-linear/), fuses three industry references:
 
-| 学哪里 | 用于 |
+| Learning from | Used for |
 |---|---|
-| **Notion** 的骨架 | 信息组织、阅读舒适度、卡片布局、留白 |
-| **Linear** 的质感 | 精致阴影、微妙渐变、状态过渡、深色侧边栏 |
-| **Raycast** 的浮层 | 毛玻璃、悬浮层、轻盈感 |
+| **Notion**'s skeleton | Information architecture, reading comfort, card layouts, whitespace |
+| **Linear**'s craft | Subtle shadows, refined gradients, state transitions, dark sidebar |
+| **Raycast**'s overlays | Glassmorphism, floating panels, lightweight feel |
 
-配色 token 精简到极致：
+Color tokens kept minimal:
 
 ```
-bg-canvas      #f7f8fc    页面底色（微蓝灰，非纯白）
-text-ink       #1a1d2e    主文字（深色，非纯黑）
-bg-accent      #5e6ad2    唯一强调色（Linear 靛蓝紫）
-border-edge    #e6e9f0    极淡描边
+bg-canvas      #f7f8fc    Page background (subtle blue-gray, not pure white)
+text-ink       #1a1d2e    Primary text (near-black, not pure black)
+bg-accent      #5e6ad2    The only accent color (Linear indigo-violet)
+border-edge    #e6e9f0    Whisper-thin border
 ```
 
-字体：**Plus Jakarta Sans**（英文）+ **Noto Sans SC**（思源黑体）。
-坚决不用 Inter（用户真实审美反馈：太硬）。
+Typography: **Plus Jakarta Sans** (Latin) + **Noto Sans SC** (Chinese).
+Inter is explicitly banned — real user feedback: "too harsh".
 
 ---
 
 ## ⚡ Quick Start
 
-前提：已安装 [Claude Code](https://docs.claude.com/en/docs/claude-code/overview)。
+**Prerequisite**: [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) installed.
 
 ```bash
-# 1. 拉仓库
+# 1. Clone the repo
 git clone https://github.com/Rubbish0-A/ruidong-ui-studio.git
 
-# 2. 在 Claude Code 里注册为本地 marketplace
+# 2. Register as a local marketplace (inside Claude Code)
 /plugin marketplace add /path/to/ruidong-ui-studio
 
-# 3. 安装
+# 3. Install
 /plugin install ruidong-ui@ruidong-ui-studio
 
-# 4. 重启 Claude Code
+# 4. Restart Claude Code
 ```
 
-然后在**任意**睿动智能体项目里说：
+Then, inside **any** Ruidong agent project, just say:
 
-> "帮我做一个侧边栏，按睿动风格"
+> "Give me a sidebar in the Ruidong style."
 >
-> "给我一个符合睿动 UI 的主按钮"
+> "I need a primary button that matches our UI conventions."
 >
-> "用 SmartSolu 同款，写一个新智能体的起手模板"
+> "Scaffold a new agent project using the SmartSolu aesthetic."
 
-Claude 会自动激活 `ruidong-ui` skill，按内置规范生成代码。
+Claude auto-activates the `ruidong-ui` skill and generates code that follows the spec.
 
 ---
 
-## 它是怎么工作的
+## How It Works
 
-这不是"一份大文档让 Claude 一次读完"，而是**按需加载**的分层知识库：
+This isn't "one giant document Claude reads in full" — it's a **lazily-loaded layered knowledge base**:
 
 ```
-第一层：skill 激活 → 只读 SKILL.md（~70 行）+ QUICKREF.md（~45 行）
-                   → 80% 的简单请求到这里就够了（按钮、卡片、Toast）
+Layer 1: Skill activates  → Reads SKILL.md (~70 lines) + QUICKREF.md (~45 lines)
+                          → Covers 80% of simple requests (button, card, Toast)
 
-第二层：需要具体组件 → 按需读 components/buttons.md / sidebar.md / ...
-                    → 每个文件 <90 行
+Layer 2: Needs a specific component → Reads components/buttons.md, sidebar.md, ...
+                                    → Each file <90 lines
 
-第三层：需要完整设计哲学 → 读 PHILOSOPHY.md / TOKENS.md / 完整样例
+Layer 3: Needs full philosophy → Reads PHILOSOPHY.md, TOKENS.md, full examples
 ```
 
-**为什么这样拆？** 因为 Claude 的上下文是稀缺资源。一次塞 700 行进去，可用的上下文空间就少了一大截。这个拆分在简单请求上省 90% 上下文，复杂请求上多一次 Read 也值得。
+**Why this split?** Because context is scarce. Shoving 700 lines in at once eats a huge chunk of the usable window. This structure saves ~90% of context for simple requests, and an extra `Read` call for complex ones is well worth it.
 
 ---
 
-## 🧩 当前收录的风格
+## 🧩 Available Styles
 
-| 风格 ID | 一句话叙事 | 来源 | 状态 |
+| Style ID | One-liner | Source | Status |
 |---|---|---|---|
-| [`smartsolu-linear`](skills/ruidong-ui/styles/smartsolu-linear/) | 冷静、聪明、轻盈的专业工作台。Notion 骨架 + Linear 质感 + Raycast 浮层。 | SmartSoluExpert v1.6.0 生产风格 | 稳定 |
+| [`smartsolu-linear`](skills/ruidong-ui/styles/smartsolu-linear/) | A calm, intelligent, lightweight professional workbench. Notion skeleton + Linear craft + Raycast overlays. | SmartSoluExpert v1.6.0 (our in-house AI solution architect tool) | Stable |
 
-未来加入更多风格的流程见 [CONTRIBUTING](skills/ruidong-ui/CONTRIBUTING.md)。
+See [CONTRIBUTING](skills/ruidong-ui/CONTRIBUTING.md) for how to add more styles.
 
 ---
 
-## 项目结构
+## Project Structure
 
 ```
 ruidong-ui-studio/
-├── .claude-plugin/                 Plugin 清单（Claude Code 原生识别）
+├── .claude-plugin/                 Plugin manifest (Claude Code native)
 │   ├── plugin.json
 │   └── marketplace.json
 ├── skills/
-│   └── ruidong-ui/                 核心 skill
-│       ├── SKILL.md                入口：选风格 + 工作流程
-│       ├── PRINCIPLES.md           跨风格共通的元原则（底线）
-│       ├── CONTRIBUTING.md         如何新增风格
+│   └── ruidong-ui/                 The core skill
+│       ├── SKILL.md                Entry: pick a style + workflow
+│       ├── PRINCIPLES.md           Cross-style meta-principles (hard floor)
+│       ├── CONTRIBUTING.md         How to add new styles
 │       └── styles/
 │           └── smartsolu-linear/
-│               ├── QUICKREF.md     一页纸速查（Claude 首选加载）
-│               ├── PHILOSOPHY.md   三源融合叙事、绝不做的事
-│               ├── TOKENS.md       色/字/阴影/圆角完整令牌
-│               ├── components/     按组件类别拆分
+│               ├── QUICKREF.md     One-page cheatsheet (Claude loads first)
+│               ├── PHILOSOPHY.md   Three-source narrative, hard don'ts
+│               ├── TOKENS.md       Full color/type/shadow/radius tokens
+│               ├── components/     Split by category
 │               │   ├── buttons.md
 │               │   ├── cards.md
 │               │   ├── inputs.md
-│               │   ├── overlay.md  顶栏 + 弹窗 + Toast
+│               │   ├── overlay.md  Header + modals + Toast
 │               │   ├── sidebar.md
 │               │   └── misc.md
 │               ├── tailwind.config.js
 │               ├── fonts.html
-│               └── examples/       完整 tsx 样例
-├── evals/                          触发 eval 基线（维护者用）
-├── install.ps1 / install.sh        备选安装脚本（非 Claude Code 环境）
+│               └── examples/       Full .tsx samples
+├── evals/                          Trigger-eval baseline (for maintainers)
+├── install.ps1 / install.sh        Fallback install scripts (non-Claude-Code environments)
 ├── CHANGELOG.md
 └── LICENSE
 ```
 
 ---
 
-## 哲学：什么坚决不做
+## Design Philosophy: What We Don't Do
 
-[`PRINCIPLES.md`](skills/ruidong-ui/PRINCIPLES.md) 里列了跨风格的底线。几条你能感受到的：
+[`PRINCIPLES.md`](skills/ruidong-ui/PRINCIPLES.md) defines the hard floor across all styles. A few you'll feel:
 
-- **绝不用 Inter** —— 来自真实用户反馈："Inter 太硬"；睿动需要更温暖、更几何圆润的字体
-- **主内容区禁用毛玻璃** —— 毛玻璃只出现在 Overlay 层（顶栏 / 弹窗 / Toast / 下拉）
-- **一屏视觉重点 ≤ 1 个** —— 多焦点会破坏"冷静工作台"气质
-- **全产品只有 1 个主强调色** —— 画面 85%+ 由中性色承担
-- **动效时长 ≤ 400ms** —— 动效是"状态切换顺手"，不是"看见动画"
+- **Never use Inter** — real user feedback: "Inter is too harsh". Ruidong needs warmer, more geometric type.
+- **No glassmorphism in main content areas** — glass effects belong only to the Overlay layer (header, modals, Toast, dropdowns).
+- **≤ 1 visual focal point per screen** — multiple foci break the "calm workbench" feel.
+- **Only one accent color product-wide** — 85%+ of the canvas is carried by neutrals.
+- **Motion ≤ 400ms** — animation is "state changes feel natural", not "look, an animation".
 
-这些不是装饰性建议 —— 每条都写进了 SKILL.md，Claude 生成代码时会遵守。
-
----
-
-## 🧭 路线图
-
-**短期**（当前 plugin 内扩展）
-
-- [ ] 加更多风格（`<来源>-<气质>` 命名约定，详见 [CONTRIBUTING](skills/ruidong-ui/CONTRIBUTING.md)）
-- [ ] 加 "组合场景 recipe"：完整登录页 / 管理后台 / 对话界面等"一次成形"级别的代码样例
-- [ ] 加 `/ruidong-new-agent` slash command：一键起手新智能体项目
-- [ ] 加 `/ruidong-ui-audit` slash command：审计已有项目是否符合规范
-
-**中期**（marketplace 扩展）
-
-- [ ] 独立 plugin：`ruidong-agent-sdk`（睿动 API 接入规范）
-- [ ] 独立 plugin：`ruidong-deploy`（睿动平台部署工作流）
+These aren't decorative suggestions. Each is written into SKILL.md, and Claude enforces them when generating code.
 
 ---
 
-## 🤝 贡献
+## 🧭 Roadmap
 
-想加一个新的风格？看 [CONTRIBUTING](skills/ruidong-ui/CONTRIBUTING.md)。
+**Near term** (extending this plugin)
 
-每个新风格必须提供：
+- [ ] Add more styles (naming convention `<source>-<vibe>`, see [CONTRIBUTING](skills/ruidong-ui/CONTRIBUTING.md))
+- [ ] Add "composite scenario recipes": full login pages, admin dashboards, chat interfaces — "one-shot" code samples
+- [ ] Add `/ruidong-new-agent` slash command: scaffold a new agent project in one keystroke
+- [ ] Add `/ruidong-ui-audit` slash command: check an existing project against the spec
 
-- `QUICKREF.md`（速查卡）
-- `PHILOSOPHY.md`（叙事 + 底线）
-- `TOKENS.md`（完整令牌）
-- `components/`（拆分的组件片段）
-- `tailwind.config.js` + `fonts.html`（可复制的配置）
-- `examples/`（完整样例）
+**Mid term** (marketplace expansion)
 
-PR 欢迎。Issue 也欢迎（即使只是"这里写得不清楚"）。
+- [ ] Standalone plugin: `ruidong-agent-sdk` (Ruidong API integration conventions)
+- [ ] Standalone plugin: `ruidong-deploy` (Ruidong platform deployment workflows)
 
 ---
 
-## 适用范围
+## 🤝 Contributing
 
-**适合**
+Want to add a new style? See [CONTRIBUTING](skills/ruidong-ui/CONTRIBUTING.md).
 
-- 睿动内部同事做新智能体项目的 UI 起点
-- 客户交付类产品需要统一视觉气质
-- React + Tailwind 的前端项目（当前风格主要针对此栈）
+Every new style must include:
 
-**不适合**
+- `QUICKREF.md` (cheatsheet)
+- `PHILOSOPHY.md` (narrative + hard don'ts)
+- `TOKENS.md` (full tokens)
+- `components/` (split component snippets)
+- `tailwind.config.js` + `fonts.html` (copy-pasteable config)
+- `examples/` (full samples)
 
-- 面向 C 端的娱乐 / 社交产品（当前风格偏克制专业）
-- 纯展示型 / 单页营销网站（当前是工作台气质）
-- 需要鲜艳明亮色彩的儿童 / 教育类产品
+PRs welcome. Issues welcome too (even "this wording is unclear" counts).
+
+---
+
+## Scope
+
+**Good fit**
+
+- Starting a new Ruidong agent project and needing a UI foundation
+- Client-delivery products that need a unified visual identity
+- React + Tailwind frontend projects (the current style is tuned for this stack)
+
+**Not a good fit**
+
+- Consumer-facing entertainment/social products (the current style is deliberately restrained)
+- Pure marketing / single-page promo sites (this is workbench aesthetics, not hero-headline aesthetics)
+- Kids' / education apps that need bright, vivid palettes
 
 ---
 
@@ -218,16 +218,16 @@ PR 欢迎。Issue 也欢迎（即使只是"这里写得不清楚"）。
 
 ---
 
-## 致谢
+## Credits
 
-- 风格灵感来自 [Linear](https://linear.app) / [Notion](https://notion.so) / [Raycast](https://raycast.com) 三家对"精致但克制"有深刻理解的产品团队
-- 基于 [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) / [Anthropic Agent Skills](https://docs.claude.com/en/docs/claude-code/agent-skills) 协议构建
-- 首个风格抽象自生产项目 **SmartSoluExpert v1.6.0** —— 在多轮真实客户使用中打磨出来的审美判断
+- Style inspiration from [Linear](https://linear.app) / [Notion](https://notion.so) / [Raycast](https://raycast.com) — three product teams with deep understanding of "refined but restrained"
+- Built on [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) and [Anthropic Agent Skills](https://docs.claude.com/en/docs/claude-code/agent-skills)
+- The first curated style is abstracted from our production project **SmartSoluExpert v1.6.0** — aesthetic judgment forged through rounds of real client use
 
 <div align="center">
 
-**让每一个睿动智能体看起来都像同一个团队做的。**
+**Make every Ruidong AI agent look like it was designed by the same team.**
 
-[快速安装 ↑](#-quick-start) · [查看风格 →](skills/ruidong-ui/styles/smartsolu-linear/) · [贡献指南 →](skills/ruidong-ui/CONTRIBUTING.md)
+[Quick install ↑](#-quick-start) · [View the style →](skills/ruidong-ui/styles/smartsolu-linear/) · [Contributing guide →](skills/ruidong-ui/CONTRIBUTING.md)
 
 </div>
