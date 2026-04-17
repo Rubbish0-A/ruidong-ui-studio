@@ -14,12 +14,6 @@ module.exports = {
         sans: ['"Plus Jakarta Sans"', '"Noto Sans SC"', '-apple-system', 'BlinkMacSystemFont', '"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'],
       },
       colors: {
-        // Legacy primary palette（兼容旧代码，新代码请用 accent）
-        primary: {
-          50: '#edf0ff', 100: '#dde3ff', 200: '#c3ccff', 300: '#9baaff',
-          400: '#7088f5', 500: '#4d6aed', 600: '#3d63dd', 700: '#3354c4',
-          800: '#2a449e', 900: '#1e3178',
-        },
         // 浅色主内容区 tokens
         canvas: '#f7f8fc',
         'surface-alt': '#f1f3f9',

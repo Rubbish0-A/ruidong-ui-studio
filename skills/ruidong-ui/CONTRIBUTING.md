@@ -97,7 +97,7 @@ styles/<your-style-id>/
 ## 不得违反
 
 - ❌ 新风格的 PHILOSOPHY.md 不得与 `PRINCIPLES.md`（跨风格共通元原则）冲突。若有新想法需要放宽某条共通原则，先改 PRINCIPLES.md 再加风格。
-- ❌ 不得使用 Inter 字体（睿动 UI 元原则，全库通用）
+- ❌ 不得使用 Inter 字体（见 [PRINCIPLES.md §4](PRINCIPLES.md#4-字体底线typography-floor)）
 - ❌ 不得给同一风格同时提供多套配色（要多套就是多个风格）
 - ❌ 不得省略本文件列出的任何必备文件
 
