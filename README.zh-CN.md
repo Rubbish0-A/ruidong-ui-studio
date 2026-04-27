@@ -35,9 +35,13 @@
 
 ## 🎨 设计气质速览
 
-> **冷静、聪明、轻盈的专业工作台。**
+两套风格，各有鲜明个性——按产品场景选一套：
 
-当前唯一收录的风格 [`smartsolu-linear`](skills/ruidong-ui/styles/smartsolu-linear/) 融合了三个业界标杆：
+---
+
+### `smartsolu-linear` — 克制、精致、专业工作台
+
+融合三个业界标杆：
 
 | 学哪里 | 用于 |
 |---|---|
@@ -54,8 +58,24 @@ bg-accent      #5e6ad2    唯一强调色（Linear 靛蓝紫）
 border-edge    #e6e9f0    极淡描边
 ```
 
-字体：**Plus Jakarta Sans**（英文）+ **Noto Sans SC**（思源黑体）。
-坚决不用 Inter（用户真实审美反馈：太硬）。
+---
+
+### `bold-vivid` — 强识别度、反平庸、主题化
+
+4 个子主题，每套都是完整的视觉身份：
+
+| 子主题 | 配色 | 字体 |
+|---|---|---|
+| `cyberpunk` | 深蓝黑 + 霓虹粉红 `#ff2e97` + 青蓝 `#00d9ff` | Space Grotesk 900w + DM Mono |
+| `brutalist` | 米白 + 极黑粗边框 + 野兽派红 `#e63022` | Bebas Neue + DM Sans 200w |
+| `vaporwave` | 深紫 + 四色 mesh 渐变 + 淡黄文字 `#fffb96` | Recursive 可变字体 + DM Sans |
+| `nordic` | Nord 深灰蓝 + 冰霜蓝 `#88c0d0` + Aurora 色板 | Playfair Display + Source Sans 3 |
+
+切换子主题只需换一个 `:root` CSS 变量文件，Tailwind class 一行不改。
+
+---
+
+两套风格的共同底线：**坚决不用 Inter**（用户真实审美反馈：太硬）。
 
 ---
 

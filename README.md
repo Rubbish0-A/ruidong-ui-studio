@@ -35,9 +35,13 @@ Every new AI agent project inside our team starts with the same conversation:
 
 ## 🎨 Design Feel at a Glance
 
-> **A calm, intelligent, lightweight professional workbench.**
+Two curated styles with distinct identities — pick the one that fits your product:
 
-The currently curated style, [`smartsolu-linear`](skills/ruidong-ui/styles/smartsolu-linear/), fuses three industry references:
+---
+
+### `smartsolu-linear` — Calm, restrained, professional workbench
+
+Fuses three industry references:
 
 | Learning from | Used for |
 |---|---|
@@ -54,8 +58,24 @@ bg-accent      #5e6ad2    The only accent color (Linear indigo-violet)
 border-edge    #e6e9f0    Whisper-thin border
 ```
 
-Typography: **Plus Jakarta Sans** (Latin) + **Noto Sans SC** (Chinese).
-Inter is explicitly banned — real user feedback: "too harsh".
+---
+
+### `bold-vivid` — High-impact, anti-generic, theme-driven
+
+4 sub-themes, each a complete visual identity:
+
+| Sub-theme | Palette | Typography |
+|---|---|---|
+| `cyberpunk` | Deep navy + neon pink `#ff2e97` + cyan `#00d9ff` | Space Grotesk 900w + DM Mono |
+| `brutalist` | Off-white + pure black + red `#e63022` | Bebas Neue + DM Sans 200w |
+| `vaporwave` | Deep purple + 4-color mesh gradient + `#fffb96` text | Recursive variable + DM Sans |
+| `nordic` | Nord slate-blue + frost blue `#88c0d0` + Aurora palette | Playfair Display + Source Sans 3 |
+
+Switch sub-themes by swapping one `:root` CSS variable file — no Tailwind class changes needed.
+
+---
+
+Typography rule across both styles: **Inter is banned** — real user feedback: "too harsh".
 
 ---
 
