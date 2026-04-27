@@ -8,8 +8,8 @@
 
 示例：
 - `smartsolu-linear` —— SmartSolu 项目 + Linear 气质
+- `bold-vivid` —— 高冲击力 + 强色彩气质
 - `easy-pm-raycast` —— EasyPM 项目 + Raycast 气质
-- `dark-cyber-neo` —— 纯抽象主题（非来自具体项目）
 
 命名必须能让同事一看就知道「这是什么气质」，不要起玄学名字（例如 `moonlight`、`zenith`）。
 
@@ -23,32 +23,76 @@ styles/<your-style-id>/
 ├── QUICKREF.md               ← 一页纸速查（~30 行，Claude 激活时首选加载）
 ├── PHILOSOPHY.md             ← 叙事主线、绝不做的事、状态规则、动效规则
 ├── TOKENS.md                 ← 色彩 / 字体 / 阴影 / 圆角 / 间距的完整令牌
+│                               （使用子主题架构时，TOKENS.md 移入各 themes/<id>/ 下）
 ├── components/               ← 按组件类别拆分（每文件 <80 行，Claude 按需读）
 │   ├── README.md             ← 组件清单表
 │   ├── buttons.md
 │   ├── cards.md
 │   ├── inputs.md
 │   ├── overlay.md            ← 顶栏 + 弹窗 + Toast
-│   ├── sidebar.md
-│   └── misc.md               ← 徽章 + 空状态 + 页面骨架
+│   ├── sidebar.md            ← 若该风格有侧边栏概念
+│   └── misc.md               ← 徽章 + 空状态 + 动效工具类
 ├── tailwind.config.js        ← 可直接复制到用户项目的 Tailwind 配置
 ├── fonts.html                ← 字体 <link> + body font-family 片段
 └── examples/
-    ├── app-skeleton.tsx      ← 主容器示例
-    ├── button-set.tsx        ← 所有按钮变体
-    └── card-set.tsx          ← 所有卡片变体
+    ├── app-skeleton.tsx      ← 或适合该风格的典型页面示例
+    └── card-set.tsx          ← 组件展示示例
 ```
 
-**可选**提供：
-- `examples/form.tsx` — 表单示例
-- `examples/modal.tsx` — 弹窗示例
-- `preview.png` — 风格预览图（纳入 README.md 首屏）
+### 子主题架构（多配色变体）
+
+若一个风格需要提供多套配色变体（子主题），使用以下目录结构代替单一 `TOKENS.md`：
+
+```
+styles/<your-style-id>/
+├── QUICKREF.md              ← 总览 + 子主题选择指南
+├── PHILOSOPHY.md            ← family 级原则（跨子主题通用）
+├── THEME_INDEX.md           ← 子主题对比速查（可选）
+├── tailwind.config.js       ← 用 CSS 变量桥接（var(--accent-1)→ Tailwind）
+├── fonts.html               ← 各子主题字体方案
+├── components/              ← 使用语义 token class，跨子主题通用
+└── themes/
+    ├── <subtheme-a>/
+    │   ├── TOKENS.md        ← 该子主题的 CSS 变量完整定义
+    │   └── QUICKREF.md      ← 30 行速查
+    └── <subtheme-b>/
+        ├── TOKENS.md
+        └── QUICKREF.md
+```
+
+**子主题规则**：
+- 每个子主题的 token 必须完整且自洽（不依赖其他子主题的值）
+- 同一项目只选一个子主题，互斥使用
+- 切换子主题只需换 CSS 变量文件，Tailwind class 不变
+
+## CSS 实现方案
+
+新风格可以选择以下任一方案，在 `PHILOSOPHY.md` 里声明：
+
+**方案 A：Tailwind Token（推荐用于单配色风格）**
+```js
+// tailwind.config.js — 直接定义 token 名到 hex 值
+colors: { accent: '#5e6ad2', canvas: '#f7f8fc' }
+// 用法：bg-accent text-canvas
+```
+
+**方案 B：CSS 变量 + Tailwind 桥接（推荐用于多子主题风格）**
+```js
+// tailwind.config.js — token 名映射到 CSS 变量
+colors: { accent: 'var(--accent-1)', base: 'var(--bg-primary)' }
+// 用法相同：bg-accent text-base；切换主题只换 :root 里的变量值
+```
+
+**方案 C：纯 CSS 变量（不使用 Tailwind）**
+```css
+/* 直接用 var(--accent-1) 写 inline style 或 CSS 类 */
+```
 
 ## PHILOSOPHY.md 必答问题
 
-在新风格的 PHILOSOPHY.md 中，必须正面回答下列 6 个问题。不要模糊化。
+在新风格的 `PHILOSOPHY.md` 中，必须正面回答下列 6 个问题。不要模糊化。
 
-1. **一句话叙事**：这个风格传达什么气质？（例："冷静、聪明、轻盈的专业工作台。"）
+1. **一句话叙事**：这个风格传达什么气质？
 2. **三个学习源**：主骨架学谁？细节质感学谁？浮层交互学谁？
 3. **五条设计原则**：用户打开页面时，这个风格要做对什么事？
 4. **绝不做的事**：≥6 条具体红线（非空话）。
@@ -84,21 +128,21 @@ styles/<your-style-id>/
 
 ## 更新父 skill 索引
 
-把新风格加到 `skill/ruidong-ui/SKILL.md` 的"当前已收录的风格"表中：
+把新风格加到 `skills/ruidong-ui/SKILL.md` 的"当前已收录的风格"表中：
 
 ```markdown
 | `your-style-id` | 一句话叙事 | 来源 | 气质关键词 |
 ```
 
-**同时更新 `description` 的触发短语**（frontmatter 第一行）。新风格如果引入了新的关键气质词（比如 "Raycast 同款"），加进去帮助用户触发。
+**同时更新 `description` 的触发短语**（frontmatter 第一行）。新风格如果引入了新的关键气质词，加进去帮助用户触发。
 
 顺便更新仓库根的 `README.md` 里的同一张表。
 
 ## 不得违反
 
-- ❌ 新风格的 PHILOSOPHY.md 不得与 `PRINCIPLES.md`（跨风格共通元原则）冲突。若有新想法需要放宽某条共通原则，先改 PRINCIPLES.md 再加风格。
-- ❌ 不得使用 Inter 字体（见 [PRINCIPLES.md §4](PRINCIPLES.md#4-字体底线typography-floor)）
-- ❌ 不得给同一风格同时提供多套配色（要多套就是多个风格）
+- ❌ 新风格的 `PHILOSOPHY.md` 不得与 `skills/ruidong-ui/PRINCIPLES.md`（跨风格共通元原则）中的**全局底线部分**冲突
+- ❌ 若风格有自己的风格族原则需要放宽全局底线中的某条，先在 `PRINCIPLES.md` §8（风格族附加原则）里为该风格族建立新章节，再写风格
+- ❌ 不得使用 Inter 字体（见 PRINCIPLES.md §2）
 - ❌ 不得省略本文件列出的任何必备文件
 
 ## 提交流程
@@ -106,7 +150,7 @@ styles/<your-style-id>/
 ```bash
 git checkout -b add-<your-style-id>
 # ... 写文件 ...
-git add styles/<your-style-id> skill/ruidong-ui/SKILL.md README.md
+git add styles/<your-style-id> skills/ruidong-ui/SKILL.md README.md
 git commit -m "feat: add <your-style-id> style"
 git push -u origin add-<your-style-id>
 # 然后在 Git 平台上开 Pull Request
@@ -118,7 +162,7 @@ Reviewer 至少包括：
 
 ## 版本化
 
-每次风格变更（除了纯 typo 修复）都在风格目录的 README.md 头部维护 CHANGELOG：
+每次风格变更（除了纯 typo 修复）都在风格目录的 `README.md` 头部维护 CHANGELOG：
 
 ```markdown
 ## 版本

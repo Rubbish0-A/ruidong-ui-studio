@@ -2,6 +2,41 @@
 
 本文档记录 `ruidong-ui-studio` 的每次发布改动。遵循 [Semantic Versioning](https://semver.org/)。
 
+## [1.1.0] — 2026-04-27
+
+### ✨ 新增风格：bold-vivid（含 4 个子主题）
+
+新增高冲击力风格 `bold-vivid`，反"AI 平庸美学"，适合 Landing page / 营销站 / 作品集。
+
+**4 个子主题，选一即用：**
+- **cyberpunk** — 深蓝黑底 + 霓虹粉红/青蓝，Space Grotesk 900w，Blade Runner 美学
+- **brutalist** — 米白底 + 极黑粗边框 + 野兽派红，Bebas Neue 全大写，offset 阴影
+- **vaporwave** — 深紫底 + 四色 mesh 渐变 + 淡黄文字，Recursive 可变字体，Y2K 美学
+- **nordic** — Nord 深灰蓝底 + 冰霜蓝 + Aurora 功能色，Playfair Display 衬线标题
+
+**关键技术决策：**
+- CSS 变量桥接方案：切换子主题只需换 `:root` 变量文件，Tailwind class 不用改
+- `components/` 使用语义 token class（`bg-accent`/`text-foreground`），跨子主题通用
+
+### 🔒 一致性机制强化
+
+- **`ruidong-ui.config.json`**：新建项目时生成主题锁定文件，防止同一项目多次生成 UI 时跑偏
+- **SKILL.md** 新增 MUST/MUST NOT 硬约束（不得写 raw hex、不得用 Inter、不得混用主题）
+- **第四步自查 checklist**：Claude 每次输出代码前主动核查 token 一致性
+
+### 🏗 架构调整
+
+- **PRINCIPLES.md** 重构为两层：全局品牌底线 + 风格族附加原则，`bold-vivid` 的多色/强动效规则不再与全局约束冲突
+- **CONTRIBUTING.md** 新增子主题架构规范（`themes/` 子目录），修复路径拼写错误（`skill/` → `skills/`）
+- **plugin.json** 版本升至 1.1.0，描述更新
+
+### 文件变更
+
+- 新建 21 个文件（`styles/bold-vivid/` 完整风格目录）
+- 修改 3 个文件（PRINCIPLES.md · CONTRIBUTING.md · SKILL.md）
+
+---
+
 ## [1.0.1] — 2026-04-17
 
 ### 🧹 重构（无功能变化）

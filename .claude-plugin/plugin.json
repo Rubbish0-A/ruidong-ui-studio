@@ -1,7 +1,7 @@
 {
   "name": "ruidong-ui",
-  "version": "1.0.1",
-  "description": "睿动 AI 智能体统一 UI/UX 风格库。让同事在新建智能体项目时直接复用 Notion 骨架 + Linear 质感 + Raycast 浮层的成熟风格，不用每次从零讨论配色/字体/组件。当前收录 smartsolu-linear（来自 SmartSoluExpert v1.6.0）。",
+  "version": "1.1.0",
+  "description": "睿动 AI 智能体统一 UI/UX 风格库。收录 smartsolu-linear（Notion+Linear+Raycast 克制工作台）和 bold-vivid（高冲击力风格，含 cyberpunk / brutalist / vaporwave / nordic 四个子主题）。同一主题下生成的智能体界面配色和字体自动一致，布局不锁死。",
   "author": {
     "name": "Ruidong AI"
   },
