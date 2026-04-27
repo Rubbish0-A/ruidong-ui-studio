@@ -108,11 +108,12 @@ Claude 会自动激活 `ruidong-ui` skill，按内置规范生成代码。
 
 ## 🧩 当前收录的风格
 
-| 风格 ID | 一句话叙事 | 来源 | 状态 |
-|---|---|---|---|
-| [`smartsolu-linear`](skills/ruidong-ui/styles/smartsolu-linear/) | 冷静、聪明、轻盈的专业工作台。Notion 骨架 + Linear 质感 + Raycast 浮层。 | SmartSoluExpert v1.6.0 生产风格 | 稳定 |
+| 风格 ID | 一句话叙事 | 子主题 | 适用场景 | 状态 |
+|---|---|---|---|---|
+| [`smartsolu-linear`](skills/ruidong-ui/styles/smartsolu-linear/) | 冷静、聪明、轻盈的专业工作台。Notion 骨架 + Linear 质感 + Raycast 浮层。 | — | 智能体工作台、设置页、管理界面 | 稳定 |
+| [`bold-vivid`](skills/ruidong-ui/styles/bold-vivid/) | 强识别度、反平庸——每个界面都应有独特的视觉记忆点。 | `cyberpunk` · `brutalist` · `vaporwave` · `nordic` | Landing page、营销站、作品集 | 稳定 |
 
-未来加入更多风格的流程见 [CONTRIBUTING](skills/ruidong-ui/CONTRIBUTING.md)。
+新增风格的流程见 [CONTRIBUTING](skills/ruidong-ui/CONTRIBUTING.md)。
 
 ---
 

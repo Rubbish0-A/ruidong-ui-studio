@@ -108,9 +108,10 @@ Layer 3: Needs full philosophy → Reads PHILOSOPHY.md, TOKENS.md, full examples
 
 ## 🧩 Available Styles
 
-| Style ID | One-liner | Source | Status |
-|---|---|---|---|
-| [`smartsolu-linear`](skills/ruidong-ui/styles/smartsolu-linear/) | A calm, intelligent, lightweight professional workbench. Notion skeleton + Linear craft + Raycast overlays. | SmartSoluExpert v1.6.0 (our in-house AI solution architect tool) | Stable |
+| Style ID | One-liner | Sub-themes | Best for | Status |
+|---|---|---|---|---|
+| [`smartsolu-linear`](skills/ruidong-ui/styles/smartsolu-linear/) | A calm, intelligent, lightweight professional workbench. Notion skeleton + Linear craft + Raycast overlays. | — | Agent dashboards, workbenches, settings pages | Stable |
+| [`bold-vivid`](skills/ruidong-ui/styles/bold-vivid/) | High-impact, anti-generic — every interface should have a visual identity of its own. | `cyberpunk` · `brutalist` · `vaporwave` · `nordic` | Landing pages, marketing sites, portfolios | Stable |
 
 See [CONTRIBUTING](skills/ruidong-ui/CONTRIBUTING.md) for how to add more styles.
 
