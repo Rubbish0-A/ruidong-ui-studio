@@ -1,17 +1,17 @@
 {
-  "name": "ruidong-ui-studio",
-  "description": "睿动 AI UI/UX 风格库 —— 开发期本地 marketplace。同事使用时可替换为 Git 仓库 URL。",
+  "name": "raytone-ui-studio",
+  "description": "Raytone (睿动) AI UI/UX 风格库 —— 开发期本地 marketplace。同事使用时可替换为 Git 仓库 URL。",
   "owner": {
-    "name": "Ruidong AI"
+    "name": "Raytone"
   },
   "plugins": [
     {
-      "name": "ruidong-ui",
-      "description": "睿动 AI 智能体统一 UI/UX 风格库。当前收录 smartsolu-linear。",
-      "version": "1.0.1",
+      "name": "raytone-ui",
+      "description": "Raytone (睿动) AI 智能体统一 UI/UX 风格库。当前收录 smartsolu-linear 和 bold-vivid。",
+      "version": "1.1.0",
       "source": "./",
       "author": {
-        "name": "Ruidong AI"
+        "name": "Raytone"
       }
     }
   ]

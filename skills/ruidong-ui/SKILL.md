@@ -1,9 +1,9 @@
 ---
-name: ruidong-ui
-description: Use this skill whenever building, designing, or styling any frontend UI for a Ruidong (睿动) AI agent project — even if the user doesn't explicitly say "睿动风格". Apply proactively when the user mentions designing a sidebar, dashboard, settings page, chat panel, Tailwind config, or any React/frontend UI for a new Ruidong agent, or says things like "睿动风格"、"睿动 UI"、"用睿动的样式"、"ruidong-ui"、"SmartSolu 同款"、"智能解决方案架构师同款"、"需要和睿动其他智能体保持视觉一致"、"跟智能体广场其他 app 保持一致"、"bold-vivid 风格"、"赛博朋克风格"、"北欧简约风"、"蒸汽波风格"、or slashes /ruidong-ui. Contains a curated set of styles (smartsolu-linear — the polished Notion+Linear+Raycast workbench aesthetic; bold-vivid — high-impact themed aesthetics with 4 sub-themes); the skill helps pick one when not specified and then supplies tokens, component snippets, and full example code so the agent's UI stays on brand without debating colors/fonts/components from scratch.
+name: raytone-ui
+description: Use this skill whenever building, designing, or styling any frontend UI for a Raytone (睿动) AI agent project — even if the user doesn't explicitly say "睿动风格". Apply proactively when the user mentions designing a sidebar, dashboard, settings page, chat panel, Tailwind config, or any React/frontend UI for a new Raytone agent, or says things like "睿动风格"、"睿动 UI"、"用睿动的样式"、"raytone-ui"、"SmartSolu 同款"、"智能解决方案架构师同款"、"需要和睿动其他智能体保持视觉一致"、"跟智能体广场其他 app 保持一致"、"bold-vivid 风格"、"赛博朋克风格"、"北欧简约风"、"蒸汽波风格"、or slashes /raytone-ui. Contains a curated set of styles (smartsolu-linear — the polished Notion+Linear+Raycast workbench aesthetic; bold-vivid — high-impact themed aesthetics with 4 sub-themes); the skill helps pick one when not specified and then supplies tokens, component snippets, and full example code so the agent's UI stays on brand without debating colors/fonts/components from scratch.
 ---
 
-# Ruidong UI Studio
+# Raytone UI Studio
 
 这个 skill 的作用是让 Claude 按睿动沉淀下来的某一套既定 UI/UX 风格生成前端界面代码，而不是每次新项目都从零讨论配色、字体、组件。所有风格都是基于真实睿动智能体打磨出来的，带着团队经过多轮反馈验证的审美判断。
 
@@ -20,7 +20,7 @@ description: Use this skill whenever building, designing, or styling any fronten
 
 选择逻辑：
 
-- **用户已明确指定风格**（`/ruidong-ui smartsolu-linear`、"bold-vivid cyberpunk 主题"）：直接进入第二步。
+- **用户已明确指定风格**（`/raytone-ui smartsolu-linear`、"bold-vivid cyberpunk 主题"）：直接进入第二步。
 - **用户没指定具体风格**：用 AskUserQuestion 把表格呈现给用户让他选。
 - **选了 bold-vivid 但未指定子主题**：再用 AskUserQuestion 展示 4 个子主题的一句话描述让他选（见 `styles/bold-vivid/QUICKREF.md`）。
 - **用户说的是自由形容词**（"高级点"、"有冲击力"、"深色"）：先按形容词匹配，若仍有多个候选再用 AskUserQuestion 确认。
@@ -91,8 +91,8 @@ description: Use this skill whenever building, designing, or styling any fronten
 
 ## 跨风格的共通元原则
 
-无论加载哪套具体风格，共通的底线写在 `skills/ruidong-ui/PRINCIPLES.md`。具体风格告诉你"这个项目怎么写"，共通原则告诉你"无论怎么写都不能越的线"。
+无论加载哪套具体风格，共通的底线写在 `skills/raytone-ui/PRINCIPLES.md`。具体风格告诉你"这个项目怎么写"，共通原则告诉你"无论怎么写都不能越的线"。
 
 ## 新增风格
 
-详见 `skills/ruidong-ui/CONTRIBUTING.md`。
+详见 `skills/raytone-ui/CONTRIBUTING.md`。

@@ -1,15 +1,15 @@
 {
-  "name": "ruidong-ui",
+  "name": "raytone-ui",
   "version": "1.1.0",
-  "description": "睿动 AI 智能体统一 UI/UX 风格库。收录 smartsolu-linear（Notion+Linear+Raycast 克制工作台）和 bold-vivid（高冲击力风格，含 cyberpunk / brutalist / vaporwave / nordic 四个子主题）。同一主题下生成的智能体界面配色和字体自动一致，布局不锁死。",
+  "description": "Raytone (睿动) AI 智能体统一 UI/UX 风格库。收录 smartsolu-linear（Notion+Linear+Raycast 克制工作台）和 bold-vivid（高冲击力风格，含 cyberpunk / brutalist / vaporwave / nordic 四个子主题）。同一主题下生成的智能体界面配色和字体自动一致，布局不锁死。",
   "author": {
-    "name": "Ruidong AI"
+    "name": "Raytone"
   },
-  "homepage": "https://github.com/ruidong-ai/ruidong-ui-studio",
-  "repository": "https://github.com/ruidong-ai/ruidong-ui-studio",
+  "homepage": "https://github.com/Rubbish0-A/raytone-ui-studio",
+  "repository": "https://github.com/Rubbish0-A/raytone-ui-studio",
   "license": "MIT",
   "keywords": [
-    "ruidong",
+    "raytone",
     "睿动",
     "ui",
     "design-system",
