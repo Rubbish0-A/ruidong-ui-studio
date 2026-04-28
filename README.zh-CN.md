@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="./assets/cover.png" alt="ruidong-ui-studio — 一套视觉语言，贯通每一个睿动智能体" width="100%" />
+<img src="./assets/cover.png" alt="raytone-ui-studio — 一套视觉语言，贯通每一个睿动智能体" width="100%" />
 
-# ruidong-ui-studio
+# raytone-ui-studio
 
 **简体中文** · [English](./README.md)
 
@@ -29,7 +29,7 @@
 
 **本质上这些问题早就有答案了** —— 只是每次都散在各个项目的 `tailwind.config.js` 和组件文件里，没有归档，没有复用路径。
 
-`ruidong-ui-studio` 把这些答案沉淀为 Claude Code plugin：**装一次，所有后续的睿动智能体项目都能直接调用同一套风格**。
+`raytone-ui-studio` 把这些答案沉淀为 Claude Code plugin：**装一次，所有后续的睿动智能体项目都能直接调用同一套风格**。
 
 ---
 
@@ -85,13 +85,13 @@ border-edge    #e6e9f0    极淡描边
 
 ```bash
 # 1. 拉仓库
-git clone https://github.com/Rubbish0-A/ruidong-ui-studio.git
+git clone https://github.com/Rubbish0-A/raytone-ui-studio.git
 
 # 2. 在 Claude Code 里注册为本地 marketplace
-/plugin marketplace add /path/to/ruidong-ui-studio
+/plugin marketplace add /path/to/raytone-ui-studio
 
 # 3. 安装
-/plugin install ruidong-ui@ruidong-ui-studio
+/plugin install raytone-ui@raytone-ui-studio
 
 # 4. 重启 Claude Code
 ```
@@ -140,7 +140,7 @@ Claude 会自动激活 `ruidong-ui` skill，按内置规范生成代码。
 ## 项目结构
 
 ```
-ruidong-ui-studio/
+raytone-ui-studio/
 ├── .claude-plugin/                 Plugin 清单（Claude Code 原生识别）
 │   ├── plugin.json
 │   └── marketplace.json
@@ -237,7 +237,7 @@ PR 欢迎。Issue 也欢迎（即使只是"这里写得不清楚"）。
 
 ## License
 
-[MIT](./LICENSE) © 2026 [Andy Chen](https://github.com/Rubbish0-A) / Ruidong AI
+[MIT](./LICENSE) © 2026 [Andy Chen](https://github.com/Rubbish0-A) / Raytone
 
 ---
 
